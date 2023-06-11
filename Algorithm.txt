@@ -1,0 +1,44 @@
+Let's go through the code step by step:
+
+1. The code includes several standard C++ libraries:
+   - `<cmath>`: Provides mathematical functions like `sqrt`, `sin`, etc.
+   - `<cstdio>`: Provides input/output functions like `printf` and `scanf`.
+   - `<vector>`: Provides dynamic array implementation.
+   - `<iostream>`: Provides input/output stream objects (e.g., `cin` and `cout`).
+   - `<algorithm>`: Provides various algorithms like sorting, searching, etc.
+
+2. The code defines a two-dimensional character array `arr` with a size of 1001x1001 and another array `find2` of the same size.
+
+3. The `main()` function begins.
+
+4. It reads an integer `a` from the input. This represents the number of test cases to follow.
+
+5. It starts a loop that runs `a` times. This loop is used to process multiple test cases.
+
+6. Inside the loop, it reads two integers `b` and `c` from the input. These represent the dimensions of the array `arr`.
+
+7. It then uses nested loops to read characters into the `arr` array.
+
+8. Next, it reads two integers `d` and `e` from the input. These represent the dimensions of the array `find2`.
+
+9. Again, nested loops are used to read characters into the `find2` array.
+
+10. The code checks if `d` is greater than `b` or `e` is greater than `c`. If either condition is true, it means that the dimensions of `find2` are greater than `arr`, and it prints "NO" and continues to the next test case.
+
+11. If the dimensions are valid, the code proceeds to compare `find2` with different subarrays of `arr` using nested loops. The purpose is to find if `find2` exists within `arr` as a subarray.
+
+12. It uses two variables `z` and `zz` to iterate over the possible starting indices of the subarray within `arr`.
+
+13. Inside the nested loops, it uses additional loops to compare each element of `find2` with the corresponding element of the subarray in `arr`.
+
+14. If any character of `find2` doesn't match the corresponding character in `arr`, it sets the `checker` variable to 1 and breaks out of the innermost loop.
+
+15. If the `checker` variable remains 0, it means all characters of `find2` match the subarray in `arr`. In this case, it sets `realcheck` to 1 and breaks out of the outermost loop.
+
+16. After the loop finishes, it checks the value of `realcheck`. If it's 1, it means `find2` was found within `arr`, and it prints "YES". Otherwise, it prints "NO".
+
+17. The loop continues for the next test case.
+
+18. Finally, the `main()` function ends, and the program returns 0 to indicate successful execution.
+
+In summary, this code takes a series of test cases as input. For each test case, it compares whether a given 2D array `find2` exists as a subarray within another 2D array `arr`. It outputs "YES" if `find2` is found and "NO" otherwise.
